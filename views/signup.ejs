@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Signup Form</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <!--====form section start====-->
+  <center>
+    <div class="user-detail">
+      <h2>Registration Form</h2>
+      <form action="/signup-form-submit" method="post">
+        <input type="text" placeholder="Full Name" name="name">
+        <input type="email" placeholder="Email Address" name="email">
+        <input type="text" placeholder="Mobile No." name="mobile">
+        <input type="date" placeholder="Date of Birth" name="dob">
+        <textarea placeholder="Address" name="address"></textarea>
+        <select name="role">
+          <option selected disabled>Select Role</option>
+          <option value="Super Admin">Super Admin</option>
+          <option value="Admin">Admin</option>
+          <option value="User">User</option>
+        </select>
+        <input type="submit">
+      </form>
+      <a href="<%= link %>">Already have an account! Login Here.</a>
+    </div>
+  </center>
+  <!--====form section end====-->
+</body>
+
+</html>
