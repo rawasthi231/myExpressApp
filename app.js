@@ -35,8 +35,12 @@ app.post('/signin-form-submit', function (req, res) {
     //res.send(query);
     con.query(query, (err, result) => {
         if (err) throw err;
-        else
+        else if(result.length >= 1){
+            //res.send(result);
             res.render('dashboard', { userName: result[0].name });
+        } else{
+            res.end('No data')
+        } 
     });
 });
 
@@ -55,8 +59,7 @@ app.get('/temp', (req, res) => {
     })
 });
 
-
-app.listen(3000, () => {
+app.listen(5000, () => {
     console.log('My server is running on port 80')
 });
 
