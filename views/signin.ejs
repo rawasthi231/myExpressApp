@@ -11,17 +11,20 @@
   <center>
     <div class="user-detail">
       <h2>Login to your account</h2>
-      <form action="/signin-form-submit" method="post">
+      <form id="signin_form" action="/signin-form-submit" method="post">
         <input type="text" placeholder="Enter Email Address" name="email">
         <input type="password" placeholder="Enter Password" name="password">
-        <input type="submit" value="Login">
+        <input type="button" value="Login" onclick="formSubmit()">
       </form>
       <a href="<%= link %>">Don't have an account?</a><br>
       <span style="color:red"><%= msg %></span>
-
     </div>
   </center>
   <!--====form section end====-->
-</body>
 
+  <script type="text/javascript" src="/javascripts/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+</body>
 </html>
